@@ -219,7 +219,7 @@ def permissions():
 @is_login
 def addpermission():
     if request.method == 'GET':
-        # per =
+        # per =的的 达瓦
         return render_template('addpermission.html')
 
 

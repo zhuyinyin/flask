@@ -14,7 +14,7 @@ def create_app():
                 static_folder=static_dir,
                 template_folder=templates_dir)
     # 注册用户登录蓝图
-    app.register_blueprint(blueprint=userlogin_bpt, url_prefix='/user')
+    app.register_blueprint(blueprint=userlogin_bpt, url_prefix='/')
 
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:123456@127.0.0.1:3306/flaskdemo2'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

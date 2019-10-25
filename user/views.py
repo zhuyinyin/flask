@@ -24,13 +24,13 @@ def login():
         if User.query.filter_by(username=username, password=password).first():
             session['username'] = username
             session['password'] = password
-            return redirect('/user/index')
+            return redirect('/index')
         else:
             msg = '* 用户名或者密码不一致'
             return render_template('login.html', msg=msg)
 
 
-@userlogin_bpt.route('/register', methods=['GET', 'POST'])
+@userlogin_bpt.route('register', methods=['GET', 'POST'])
 def register():
     if request.method == 'GET':
         return render_template('register.html')
@@ -40,7 +40,7 @@ def register():
         time = datetime.datetime.now()
         db.session.add(User(username=username, password=password, u_create_time=time, role_id=2))
         db.session.commit()
-        return redirect('/user/login')
+        return redirect('/login')
 
 
 @userlogin_bpt.route('/logout', methods=['GET', 'POST'])
@@ -48,7 +48,7 @@ def register():
 def logout():
     if request.method == 'GET':
         session.clear()
-        return redirect('/user/login')
+        return redirect('/login')
 
 
 @userlogin_bpt.route('/index', methods=['GET', 'POST'])
@@ -103,7 +103,7 @@ def addgrade():
         time = datetime.datetime.now()
         db.session.add(Grade(g_name=g_name, g_create_time=time))
         db.session.commit()
-        return redirect('/user/grade')
+        return redirect('/grade')
 
 
 @userlogin_bpt.route('/grade_student/<g_id>', methods=['GET', 'POST'])
@@ -125,7 +125,7 @@ def g_del(g_id):
         Student.query.filter_by(gread_id=g_id).delete()
         Grade.query.filter_by(g_id=g_id).delete()
         db.session.commit()
-        return redirect('/user/grade')
+        return redirect('/grade')
 
 
 @userlogin_bpt.route('/s_del/<s_id>', methods=['GET', 'POST'])
@@ -134,7 +134,7 @@ def s_del(s_id):
     if request.method == 'GET':
         Student.query.filter_by(s_id=s_id).delete()
         db.session.commit()
-        return redirect('/user/student')
+        return redirect('/student')
 
 
 @userlogin_bpt.route('/student', methods=['GET', 'POST'])
@@ -162,7 +162,7 @@ def addstu():
         gread_id = request.form['g_name']
         db.session.add(Student(s_name=s_name, s_sex=s_sex, gread_id=gread_id))
         db.session.commit()
-        return redirect('/user/student')
+        return redirect('/student')
 
 
 @userlogin_bpt.route('/roles', methods=['GET', 'POST'])
@@ -197,7 +197,7 @@ def adduserper(r_id):
         permission.roles.remove(role)
         db.session.add(permission)
         db.session.commit()
-        return redirect('/user/roles')
+        return redirect('/roles')
 
 
 @userlogin_bpt.route('/addroles', methods=['GET', 'POST'])
@@ -219,7 +219,6 @@ def permissions():
 @is_login
 def addpermission():
     if request.method == 'GET':
-        # per =的的 达瓦
         return render_template('addpermission.html')
 
 

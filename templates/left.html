@@ -27,7 +27,7 @@
 					</dt>
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a class="cks" href="/user/grade"
+							src="/static/img/coin222.png" /><a class="cks" href="/grade"
 							target="main">班级列表</a><img class="icon5" src="/static/img/coin21.png" />
 					</dd>
 					{% endif%}
@@ -37,7 +37,7 @@
 					{% if permission.p_er == 'TJBJ' %}
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a class="cks" href="/user/addgrade"
+							src="/static/img/coin222.png" /><a class="cks" href="/addgrade"
 							target="main">班级添加</a><img class="icon5" src="/static/img/coin21.png" />
 					</dd>
 					{% endif%}
@@ -55,7 +55,7 @@
 						</dt>
 						<dd>
 							<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-								src="/static/img/coin222.png" /><a class="cks" href="/user/student"
+								src="/static/img/coin222.png" /><a class="cks" href="/student"
 								target="main">学生列表</a><img class="icon5" src="/static/img/coin21.png" />
 						</dd>
 					{% endif %}
@@ -65,7 +65,7 @@
 						{% if permission.p_er == 'TJXS' %}
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a class="cks" href="/user/addstu"
+							src="/static/img/coin222.png" /><a class="cks" href="/addstu"
 							target="main">添加学生</a><img class="icon5" src="/static/img/coin21.png" />
 					</dd>
 					{% endif %}
@@ -82,7 +82,7 @@
 					</dt>
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a class="cks" href="/user/roles"
+							src="/static/img/coin222.png" /><a class="cks" href="/roles"
 							target="main">角色列表</a><img class="icon5" src="/static/img/coin21.png" />
 					</dd>
 					{% endif %}
@@ -92,7 +92,7 @@
 					{% if permission.p_er == 'TJJS' %}
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a class="cks" href="/user/addroles"
+							src="/static/img/coin222.png" /><a class="cks" href="/addroles"
 							target="main">添加角色</a><img class="icon5" src="/static/img/coin21.png" />
 					</dd>
 					{% endif %}
@@ -101,7 +101,7 @@
 					{% if permission.p_er == 'QXLB' %}
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a class="cks" href="/user/permissions"
+							src="/static/img/coin222.png" /><a class="cks" href="/permissions"
 							target="main">权限列表</a><img class="icon5" src="/static/img/coin21.png" />
 					</dd>
 					{% endif %}
@@ -110,7 +110,7 @@
 					{% if permission.p_er == 'TJQX' %}
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a class="cks" href="/user/addpermission"
+							src="/static/img/coin222.png" /><a class="cks" href="/addpermission"
 							target="main">添加权限</a><img class="icon5" src="/static/img/coin21.png" />
 					</dd>
 					{% endif %}
@@ -128,7 +128,7 @@
 
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a href="/user/userlist"
+							src="/static/img/coin222.png" /><a href="/userlist"
 							target="main" class="cks">用户列表</a><img class="icon5"
 							src="/static/img/coin21.png" />
 					</dd>
@@ -138,7 +138,7 @@
 					{% if permission.p_er == 'TJYH' %}
 					<dd>
 						<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-							src="/static/img/coin222.png" /><a href="/user/adduser"
+							src="/static/img/coin222.png" /><a href="/adduser"
 							target="main" class="cks">添加用户</a><img class="icon5"
 							src="/static/img/coin21.png" />
 					</dd>
@@ -154,14 +154,14 @@
 				</dt>
 				<dd>
 					<img class="coin11" src="/static/img/coin111.png" /><img class="coin22"
-						src="/static/img/coin222.png" /><a href="/user/changepwd"
+						src="/static/img/coin222.png" /><a href="/changepwd"
 						target="main" class="cks">修改密码</a><img class="icon5"
 						src="/static/img/coin21.png" />
 				</dd>
 				<dd>
 					<img class="coin11" src="/static/img/coin111.png" />
 					<img class="coin22" src="/static/img/coin222.png" />
-					<a href="javascript:parent.location.href='/user/logout'" class="cks">退出</a>
+					<a href="javascript:parent.location.href='/logout'" class="cks">退出</a>
 					<img class="icon5" src="/static/img/coin21.png" />
 				</dd>
 			</dl>
